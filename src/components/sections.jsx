@@ -38,7 +38,7 @@ const Sections = () => {
             <div className="flex flex-wrap space-3">
             {itemData.map((item) => ( 
                 <span className='w-1/2 h-48 relative'>  
-                <Link to={item.title}>
+                <Link to={`section-pages/${item.title}`}>
                   <img
                   src={`${item.img}`}
                   alt={item.title}
