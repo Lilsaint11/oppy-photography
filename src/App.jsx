@@ -6,6 +6,7 @@ import Albums from './pages/albums'
 import Contact from './pages/contact'
 import Home from './pages/home'
 import Portfolio from './pages/portfolio'
+import SectionPages from './pages/sectionPages'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path='/contact' element={<Contact/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/albums' element={<Albums/>}/>
+            <Route path='/birthdays' element={<SectionPages/>}/>
           </Routes>
         </span>
         <Footer />
