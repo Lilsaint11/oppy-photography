@@ -1,6 +1,12 @@
+import { motion } from "framer-motion"
+
 const About = () => {
     return ( 
-        <div className=" flex flex-col items-center justify-center gap-10">
+        <motion.div
+         initial={{rotateY:45}}
+         animate={{rotateY:0,transition:{duration:1}}}
+         exit={{rotateY:45,transition:{duration:2,ease:'easeInOut'}}}
+         className=" flex flex-col items-center justify-center gap-10">
             <h1 className="text-4xl font-serif">About Me</h1>
             <div className="flex flex-col items-center justify-center ">
             <div>
@@ -11,7 +17,7 @@ const About = () => {
                 <p className="max-w-4xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quaerat, totam animi molestiae veniam harum dolore culpa quidem officiis esse qui quia nobis, incidunt magnam ipsum at libero, fugiat eveniet!  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis laborum qui amet dolorem velit cumque incidunt, sed totam, alias ad aspernatur consectetur adipisci modi error illum consequatur veritatis a voluptates!</p>
             </div>
             </div>
-        </div>
+        </motion.div>
      );
 }
  

@@ -2,6 +2,7 @@ import { useParams } from "react-router";
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import { motion } from "framer-motion"
 
 const SectionPages = () => {
     const { section } = useParams();
@@ -108,7 +109,11 @@ const SectionPages = () => {
       const sectionItems = itemData.filter((item) => {item.section == section})
       console.log(sectionItems)
     return ( 
-        <div className='flex flex-col items-center justify-center'>
+        <motion.div
+          initial={{rotateY:45}}
+         animate={{rotateY:0,transition:{duration:1}}}
+         exit={{rotateY:45,transition:{duration:2,ease:'easeInOut'}}}
+         className='flex flex-col items-center justify-center'>
             <h1 className='text-2xl mb-5 font-bold'>{section}</h1>
             <Box sx={{ width: '100%', height: '100%',  }}>
                 <ImageList variant="masonry" cols={3} gap={8}>
@@ -124,7 +129,7 @@ const SectionPages = () => {
                     ))}
                 </ImageList>
             </Box>
-        </div>
+        </motion.div>
      );
 }
  

@@ -2,6 +2,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
+import { motion } from "framer-motion"
 
 const Albums = () => {
     const itemData = [
@@ -79,7 +80,11 @@ const Albums = () => {
   ];
 
     return ( 
-        <div className='flex flex-col items-center justify-center'>
+        <motion.div
+         initial={{rotateY:45}}
+         animate={{rotateY:0,transition:{duration:1}}}
+         exit={{rotateY:45,transition:{duration:2,ease:'easeInOut'}}}
+         className='flex flex-col items-center justify-center'>
             <h1 className='text-2xl mb-5 font-bold'>Albums</h1>
             <ImageList sx={{ width: "100%", height: "100%" }}>
                 <ImageListItem key="Subheader" cols={4}>
@@ -107,7 +112,7 @@ const Albums = () => {
                     </ImageListItem>
                 ))}
             </ImageList>
-        </div>
+        </motion.div>
      );
 }
  

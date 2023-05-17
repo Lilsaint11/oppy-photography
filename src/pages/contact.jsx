@@ -1,6 +1,12 @@
+import { motion } from "framer-motion"
+
 const Contact = () => {
     return ( 
-        <div className="flex justify-center h-[500px] w-[800px] mx-auto ">
+        <motion.div
+         initial={{rotateY:45}}
+         animate={{rotateY:0,transition:{duration:1}}}
+         exit={{rotateY:45,transition:{duration:2,ease:'easeInOut'}}}
+         className="flex justify-center h-[500px] w-[800px] mx-auto ">
             <div>
                 <form action="https://formspree.io/f/mgebqeok" method="post" className="flex flex-col gap-5 border border-[#402F1D] p-5 ">
                     <h1 className="text-4xl text-[#402F1D]">BOOK ME!!!</h1>
@@ -17,7 +23,7 @@ const Contact = () => {
                 <img src="https://images.unsplash.com/photo-1613730317814-1cede28e0151?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmxhY2slMjBtb2RlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="" className="h-full bg-cover" />
                
             </div>
-        </div>
+        </motion.div>
      );
 }
  
