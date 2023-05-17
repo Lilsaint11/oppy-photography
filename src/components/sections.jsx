@@ -1,8 +1,5 @@
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import ListSubheader from '@mui/material/ListSubheader';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion"
         
 const Sections = () => {
     const itemData = [
@@ -34,10 +31,14 @@ const Sections = () => {
     return ( 
 
         <div>
-            <h1 className='text-4xl flex items-center justify-center mb-5 font-serif'>Sections</h1>
+            <motion.h1
+             initial={{opacity:0}}
+             animate={{opacity:1,transition:{duration:1,delay:0.7}}}
+             className='text-4xl flex items-center justify-center mb-5 font-serif'>Sections</motion.h1>
             <div className="flex flex-wrap space-3">
             {itemData.map((item) => ( 
-                <span className='w-1/2 h-48 relative'>  
+                <span data-aos="flip-right"data-aos-easing="ease-out-cubic"
+                data-aos-duration="1500" className='w-1/2 h-48 relative'>  
                 <Link to={`section-pages/${item.title}`}>
                   <img
                   src={`${item.img}`}
