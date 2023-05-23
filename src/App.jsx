@@ -4,7 +4,7 @@ import AnimatedRoutes from './pages/animatedRoutes'
 function App() {
 
   return (
-    <div className='flex flex-col h-screen justify-between  gap-20'>
+    <div className='flex flex-col h-screen justify-between'>
       <Router>
         <AnimatedRoutes />
       </Router>

@@ -6,10 +6,10 @@ import { motion } from "framer-motion"
 const Home = () => {
     return ( 
         <motion.div
-         initial={{rotateY:45}}
+         initial={{rotateY:25}}
          animate={{rotateY:0,transition:{duration:1}}}
-         exit={{rotateY:45,transition:{duration:2,ease:'easeInOut'}}}
-         className="flex flex-col  gap-10 justify-between mt-10">
+         exit={{x:'-100vw',transition:{ease:'easeInOut'}}}
+         className="flex flex-col  gap-10 justify-between mt-10 mx-10">
             <Hero />
             <Sections />
             <WhatToExpect />

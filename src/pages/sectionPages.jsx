@@ -110,10 +110,10 @@ const SectionPages = () => {
       console.log(sectionItems)
     return ( 
         <motion.div
-          initial={{rotateY:45}}
+          initial={{rotateY:25}}
          animate={{rotateY:0,transition:{duration:1}}}
-         exit={{rotateY:45,transition:{duration:2,ease:'easeInOut'}}}
-         className='flex flex-col items-center justify-center'>
+         exit={{x:'-100vw',transition:{ease:'easeInOut'}}}
+         className='flex flex-col items-center justify-center mx-10'>
             <h1 className='text-2xl mb-5 font-bold'>{section}</h1>
             <Box sx={{ width: '100%', height: '100%',  }}>
                 <ImageList variant="masonry" cols={3} gap={8}>

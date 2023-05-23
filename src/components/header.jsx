@@ -6,7 +6,7 @@ const Header = () => {
     const activeClassName='underline underline-offset-4 decoration-slate-400 font-semibold';
     const [isOpen, setIsOpen] = useState(false)
     return ( 
-        <div className="flex justify-between bg-white sticky top-0 py-5 z-50 relative">
+        <div className="flex justify-between bg-white sticky top-0 py-5 z-50 relative mx-10 mb-10">
             <ul className="flex gap-6 text-sm">
                 <NavLink to="/" className={({ isActive }) => isActive ? activeClassName : "text-slate-500 hover:text-slate-900 transition duration-300"}>
                     <li>Home</li>

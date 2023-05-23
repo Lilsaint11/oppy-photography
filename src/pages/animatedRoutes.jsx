@@ -13,17 +13,15 @@ const AnimatedRoutes = () => {
     const location = useLocation()
     return ( 
         <AnimatePresence>
-            <span className='flex flex-col gap-10 mx-10'>
-                <Header />
-                <Routes>
-                    <Route exact path='/' element={<Home/>}/>
-                    <Route path='/portfolio' element={<Portfolio/>}/>
-                    <Route path='/contact' element={<Contact/>}/>
-                    <Route path='/about' element={<About/>}/>
-                    <Route path='/albums' element={<Albums/>}/>
-                    <Route path='/section-pages/:section' element={<SectionPages/>}/>
-                </Routes>
-            </span>
+            <Header />
+            <Routes location={location} key={location.pathname}>
+                <Route exact path='/' element={<Home/>}/>
+                <Route path='/portfolio' element={<Portfolio/>}/>
+                <Route path='/contact' element={<Contact/>}/>
+                <Route path='/about' element={<About/>}/>
+                <Route path='/albums' element={<Albums/>}/>
+                <Route path='/section-pages/:section' element={<SectionPages/>}/>
+            </Routes>
             <Footer />
         </AnimatePresence>
      );

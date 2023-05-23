@@ -3,10 +3,10 @@ import { motion } from "framer-motion"
 const Contact = () => {
     return ( 
         <motion.div
-         initial={{rotateY:45}}
+         initial={{rotateY:25}}
          animate={{rotateY:0,transition:{duration:1}}}
-         exit={{rotateY:45,transition:{duration:2,ease:'easeInOut'}}}
-         className="flex justify-center h-[500px] w-[800px] mx-auto ">
+         exit={{x:'-100vw',transition:{ease:'easeInOut'}}}
+         className="flex justify-center h-[500px] w-[800px] mx-auto mx-10">
             <div>
                 <form action="https://formspree.io/f/mgebqeok" method="post" className="flex flex-col gap-5 border border-[#402F1D] p-5 ">
                     <h1 className="text-4xl text-[#402F1D]">BOOK ME!!!</h1>
