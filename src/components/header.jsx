@@ -12,26 +12,26 @@ const Header = () => {
         setBurgerClicked((i) => !i);
     }
     return ( 
-        <div className="flex justify-between bg-white sticky top-0 py-5 z-50 relative max-[450px]:px-5 px-10 mb-10">
-            <div className="min-[700px]:hidden block text-3xl" onClick={dislayMenu}>
+        <div className="flex justify-between bg-white sticky top-0 py-5 z-50 relative max-[450px]:px-5 px-10 mb-10 relative">
+            <div className="min-[700px]:hidden block text-3xl z-20" onClick={dislayMenu}>
                     {burgerClicked ? <AiOutlineClose/> : <GiHamburgerMenu/>}
             </div>
-            <ul className={`flex gap-6 text-sm max-[700px]:hidden`}>
+            <ul className={`flex gap-6 max-[700px]:justify-between text-sm max-[700px]:flex-col max-[700px]:w-1/3 max-[700px]:h-96 max-[700px]:absolute max-[700px]:bg-slate-300 max-[700px]:pl-20 max-[700px]:py-5 top-0 left-0 z-10 transition duration-300 ${!burgerClicked && "max-[700px]:hidden left-96"}`}>
                 <NavLink to="/" className={({ isActive }) => isActive ? activeClassName : "text-slate-500 hover:text-slate-900 transition duration-300"}>
                     <li>Home</li>
                 </NavLink>
-                <NavLink to="/portfolio" className={({ isActive }) => isActive ? activeClassName : "text-slate-500 hover:text-slate-900 transition duration-300"}>
+                <NavLink to="/portfolio" className={({ isActive }) => isActive ? activeClassName : "text-slate-500 max-[700px]:text-white hover:text-slate-900 transition duration-300"}>
                     <li className='relative drop-cont' onClick={()=>setIsOpen((prev) => !prev)}>
                         Portfolio
                     </li>
                 </NavLink>
-                <NavLink to="/about" className={({ isActive }) => isActive ? activeClassName : "text-slate-500  hover:text-slate-900 transition duration-300"}>
+                <NavLink to="/about" className={({ isActive }) => isActive ? activeClassName : "text-slate-500 max-[700px]:text-white  hover:text-slate-900 transition duration-300"}>
                     <li>About</li>
                 </NavLink>
-                <NavLink to="/contact" className={({ isActive }) => isActive ? activeClassName : "text-slate-500 hover:text-slate-900 transition duration-500"}>
+                <NavLink to="/contact" className={({ isActive }) => isActive ? activeClassName : "text-slate-500 max-[700px]:text-white hover:text-slate-900 transition duration-500"}>
                     <li>Contact</li>
                 </NavLink> 
-                <NavLink to="/albums" className={({ isActive }) => isActive ? activeClassName : "text-slate-500 hover:text-slate-900 transition duration-500"}><li>Albums</li></NavLink>        
+                <NavLink to="/albums" className={({ isActive }) => isActive ? activeClassName : "text-slate-500 max-[700px]:text-white hover:text-slate-900 transition duration-500"}><li>Albums</li></NavLink>        
             </ul>
             <Link to="/"><span className='logo text-2xl'>OPPY</span></Link>
             <span>
