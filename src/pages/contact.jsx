@@ -8,10 +8,10 @@ const Contact = () => {
          exit={{x:'-100vw',transition:{ease:'easeInOut'}}}
          className="flex justify-center h-[500px] max-w-[800px] mx-auto px-5">
             <div>
-                <form action="https://formspree.io/f/mgebqeok" method="post" className="flex flex-col gap-5 border border-[#402F1D] p-5">
+                <form action="https://formspree.io/f/mgebqeok" method="post" className="flex flex-col gap-5 6 min-[550px]:border border-[#402F1D] p-5">
                     <h1 className="text-4xl text-[#402F1D]">BOOK ME!!!</h1>
-                    <input type="text" name="name" placeholder="Name" className="border border-[#402F1D]  max-[550px]:w-72 w-96 h-10 pl-3 rounded"/>
-                    <input type="text" name="Location" placeholder="Location" className="border border-[#402F1D] w-96  h-10 pl-3 rounded"/>
+                    <input type="text" name="name" placeholder="Name" className="border border-[#402F1D]  w-96 h-10 pl-3 rounded"/>
+                    <input type="text" name="Location" placeholder="Location" className="border border-[#402F1D] w-96 h-10 pl-3 rounded"/>
                     <input type="text" name="Event" placeholder="Event" className="border border-[#402F1D] w-96  h-10 pl-3 rounded"/>
                     <input type="text" name="Date" placeholder="Date" className="border border-[#402F1D] w-96 h-10 pl-3 rounded"/>
                     <input type="email" name="Email" placeholder="Email" className="border border-[#402F1D] w-96  h-10 pl-3 rounded"/>
