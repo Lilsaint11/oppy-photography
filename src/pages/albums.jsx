@@ -1,7 +1,3 @@
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import IconButton from '@mui/material/IconButton';
 import { motion } from "framer-motion"
 
 const Albums = () => {
@@ -84,34 +80,23 @@ const Albums = () => {
          initial={{rotateY:25}}
          animate={{rotateY:0,transition:{duration:1}}}
          exit={{x:'-100vw',transition:{ease:'easeInOut'}}}
-         className='flex flex-col items-center justify-center mx-10'>
+         className='flex flex-col items-center justify-center mx-5 sm:mx-10'>
             <h1 className='text-2xl mb-5 font-bold'>Albums</h1>
-            <ImageList sx={{ width: "100%", height: "100%" }}>
-                <ImageListItem key="Subheader" cols={4}>
-                    
-                </ImageListItem>
+            <div className='w-full h-full flex flex-wrap items-center justify-center gap-2'>
                 {itemData.map((item) => (
-                    <ImageListItem key={item.img}>
-                    <img
-                        src={`${item.img}?w=248&fit=crop&auto=format`}
-                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                        alt={item.title}
-                        loading="lazy"
-                    />
-                    <ImageListItemBar
-                        title={item.title}
-                        
-                        actionIcon={
-                        <IconButton
-                            sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                            aria-label={`info about ${item.title}`}
-                        >
-                        </IconButton>
-                        }
-                    />
-                    </ImageListItem>
+                    <div key={item.img} className='h-48 w-64 max-[560px]:w-full  max-[560px]:h-56  max-[560px]:bg-contain relative'>
+                      <img
+                          src={`${item.img}?w=248&fit=crop&auto=format`}
+                          srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                          alt={item.title}
+                          loading="lazy"
+                          className='h-full w-full'
+                      />
+                      <span className=' bg-[rgba(0,0,0,0.8)] text-white max-[560px]:w-full max-[560px]:h-16 max-[560px]:text-xl  w-64 h-10 absolute bottom-0 pl-3 flex items-center'>{item.title}</span>
+                 
+                    </div>
                 ))}
-            </ImageList>
+            </div>
         </motion.div>
      );
 }
