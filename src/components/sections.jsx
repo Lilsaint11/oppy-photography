@@ -38,7 +38,7 @@ const Sections = () => {
             <div className="flex flex-wrap space-3">
             {itemData.map((item) => ( 
                 <span data-aos="flip-right"data-aos-easing="ease-out-cubic"
-                data-aos-duration="1500" className='w-1/2 h-48 relative'>  
+                data-aos-duration="1500" className='w-1/2 h-48 relative' key={item.title}>  
                 <Link to={`section-pages/${item.title}`}>
                   <img
                   src={`${item.img}`}
